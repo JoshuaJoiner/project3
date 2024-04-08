@@ -79,4 +79,21 @@ function initMap() {
         // Fit the map bounds to the search results
         map.fitBounds(bounds);
     });
+
+    // Listen for Enter key press on the search input
+    input.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault(); // Prevent default behavior (form submission)
+            var places = searchBox.getPlaces();
+            if (places.length > 0) {
+                var bounds = new google.maps.LatLngBounds();
+                places.forEach(function(place) {
+                    if (place.geometry) {
+                        bounds.extend(place.geometry.location);
+                    }
+                });
+                map.fitBounds(bounds);
+            }
+        }
+    });
 }
