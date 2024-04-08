@@ -1,46 +1,35 @@
-/* Reset some default styles */
+/* Common styles for all screen sizes */
 body, h1, h2, p, ol, ul, li {
   margin: 0;
   padding: 0;
-}
-
-/* Apply a consistent font family to all text */
-body {
-  font-family: 'San-serif', Arial, sans-serif; /* Added a backup font */
-}
-
-/* Apply a consistent background color and text color */
-body {
+  font-family: 'San-serif', Arial, sans-serif;
   background-color: #f5f5f5;
   color: #333;
 }
 
-/* Apply a consistent margin and padding to sections */
 section {
-  margin: 2%; /* Using relative units for fluidity */
-  padding: 2%; /* Using relative units for fluidity */
+  margin: 2%;
+  padding: 2%;
 }
 
-/* Apply a consistent width to the header */
 header {
   width: 100%;
 }
 
-/* Apply a consistent style to the navigation menu */
 nav {
-  text-align: center; /* Center the navigation */
+  text-align: center;
 }
 
 nav ul {
   list-style: none;
   background-color: #006400;
-  display: flex; /* Change to flex to make it horizontal */
-  justify-content: center; /* Center the items horizontally */
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-  display: inline; /* Display the list items in a line */
-  margin: 0 10px; /* Add some spacing between items */
+  display: inline;
+  margin: 0 10px;
 }
 
 nav ul li a {
@@ -51,65 +40,55 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* Apply a consistent style to the header links */
 header a {
   text-decoration: none;
   color: #333;
 }
 
-/* Apply a consistent style to the footer */
 footer {
-  margin-top: 2%; /* Using relative units for fluidity */
-  padding: 1%; /* Using relative units for fluidity */
+  margin-top: 2%;
+  padding: 1%;
   background-color: #006400;
   color: white;
   text-align: center;
 }
 
-/* Fluid layout using percentage units */
 #hobbies {
   width: 80%;
   margin: 0 auto;
 }
 
-/* Fixed width layout using pixel units */
 #summary, #education, #skills, #Activities {
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Apply a consistent border and border-radius to images */
 img {
   border: 1px solid #ddd;
   border-radius: 4px;
-  float: left; /* Float the images to the left */
-  margin-right: 20px; /* Add some spacing between images */
+  float: left;
+  margin-right: 20px;
 }
 
-/* Clear floats */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Apply a consistent style to videos */
 video {
   max-width: 100%;
   height: auto;
 }
 
-/* Apply a consistent style to headings */
 h1, h2 {
   color: #007BFF;
 }
 
-/* Apply a consistent style to paragraphs */
 p {
   line-height: 1.5;
 }
 
-/* Apply a consistent style to ordered and unordered lists */
 ol, ul {
   margin-top: 10px;
 }
@@ -118,7 +97,63 @@ li {
   margin-bottom: 5px;
 }
 
-/* Apply a consistent style to the address in the footer */
 address {
   font-style: italic;
+}
+
+/* Media Queries for Mobile Devices */
+@media (min-width: 600px) {
+  /* Adjustments for screens wider than 600px */
+  header {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 2%;
+  }
+
+  #hobbies {
+    width: 90%;
+  }
+
+  #summary, #education, #skills, #Activities {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Adjustments for screens wider than 768px */
+  header {
+    font-size: 2em;
+    padding: 20px;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  footer {
+    padding: 3%;
+  }
+
+  #hobbies {
+    width: 95%;
+  }
+
+  #summary, #education, #skills, #Activities {
+    max-width: 95%;
+  }
 }
