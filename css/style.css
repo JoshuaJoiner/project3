@@ -122,3 +122,50 @@ li {
 address {
   font-style: italic;
 }
+
+/* Base styles for the summary section */
+#summary {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Media query for screens smaller than 768px (typical tablet size) */
+@media (max-width: 768px) {
+  #summary {
+    max-width: 90%; /* Adjust width for smaller screens */
+    margin: 0 auto; /* Center align */
+    padding: 10px; /* Add padding */
+  }
+
+  #summary img {
+    float: none; /* Center images */
+    margin-right: 0; /* Remove image margin */
+    margin-bottom: 10px; /* Add space below image */
+  }
+  
+  #summary h2 {
+    font-size: 24px; /* Increase heading size */
+  }
+
+  #summary p {
+    font-size: 16px; /* Increase paragraph text size */
+    line-height: 1.6; /* Adjust line height */
+  }
+}
+
+/* Media query for screens smaller than 480px (typical smartphone size) */
+@media (max-width: 480px) {
+  #summary {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 5%; /* Increase padding for better spacing */
+  }
+
+  #summary h2 {
+    font-size: 20px; /* Further decrease heading size */
+  }
+
+  #summary p {
+    font-size: 14px; /* Further decrease paragraph text size */
+    line-height: 1.5; /* Adjust line height */
+  }
+}
