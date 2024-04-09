@@ -17,7 +17,7 @@ function init(){
 		position: myLocation,
 		map: myMap,
 		animation: google.maps.Animation.BOUNCE,
-		icon: 'images/iit-logo.png'
+		icon: 'images/iit.png'
 	});
 
 	var contentString = '<h1>IIT MTCC</h1><p>MTCC is one of the best hangout and study spots on campus.</p>';
