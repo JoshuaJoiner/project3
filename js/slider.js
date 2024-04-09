@@ -28,7 +28,7 @@ function prevSlide() {
 }
 
 // Automatically advance slides
-setInterval(nextSlide, 5000);
+setInterval(nextSlide, 0000);
 
 // Initial display
 showSlides();
